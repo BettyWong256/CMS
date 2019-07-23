@@ -1,0 +1,13 @@
+$imgUrl: './img/';
+
+*{margin:0;padding:0; -ms-overflow-style: none;  overflow: -moz-scrollbars-none;}
+body{
+  font-weight:300;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+
+
+.btn-group{
+  .el-button+.el-button { margin-left: 0;}
+  a, .el-button { margin-bottom:3px; }
+}
