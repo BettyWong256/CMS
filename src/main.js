@@ -10,27 +10,28 @@ import store from './store'
 
 // 响应拦截
 axios.interceptors.response.use((response) => {
-  if (response.status == 200) {
-      return response.data;
-  } else {
-    ElementUI.Message.error(String(response.statusText));
+  if(response.data.status == -1){
+    ElementUI.Message.error(response.data.message);
     return Promise.reject({
       status: 200,
       error: String(response.statusText),
       errno: 0
     });
+  } else {
+    return response.data;
   }
 }, (error) => {
-  ElementUI.Message.error(String(error));
+  ElementUI.Message.error(error.response.data.message);
   return Promise.reject({
     status: error.response.status,
     errno: 0,
-    error: String(error)
+    error: error.response.data.message
   });
 });
 
 Vue.config.productionTip = false
 Vue.prototype.$ajax = axios;
+Vue.prototype.$Base = 'https://easy-mock.com/mock/5d37b66a4b33ce4d0693fc5a/cms';
 
 Vue.use(ElementUI);
 

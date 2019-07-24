@@ -9,7 +9,7 @@ module.exports = {
   }
 };
 
-function getProxyConfig (target) {
+function getProxyConfig () {
   const devBase = `http://49.232.33.171:8080/`;
   const config = {
     target: devBase,
@@ -17,7 +17,7 @@ function getProxyConfig (target) {
     xfwd: false,
     ws: false
   };
-  const token = '55F20B8C4465CA99A37E541D0D2B8543';
+  const token = '00CAFFABD28ED91699DF63A86D9A7C9F';
   if (token) {
     config.onProxyReq = (proxyReq, req, res) => {
       const cookieMap = {

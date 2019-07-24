@@ -2,12 +2,24 @@ $imgUrl: './img/';
 
 *{margin:0;padding:0; -ms-overflow-style: none;  overflow: -moz-scrollbars-none;}
 body{
-  font-weight:300;
   font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
 }
+a { font-size:12px; text-decoration:none;}
 
 
+// 组件优化
+.el-card__body { padding: 10px;}
+.el-form-item--mini.el-form-item, .el-form-item--small.el-form-item { margin-bottom: 8px;}
+
+// 自定义属性
 .btn-group{
   .el-button+.el-button { margin-left: 0;}
   a, .el-button { margin-bottom:3px; }
+  .detail{ color:#409eff;display:block; }
+}
+.load{
+  height:400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

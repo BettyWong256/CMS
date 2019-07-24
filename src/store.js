@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    base: {},
+    paths: {}, // 请求接口
+    config: {}, // 菜单配置
   },
   mutations: {
 

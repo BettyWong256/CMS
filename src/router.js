@@ -17,13 +17,11 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
     },
     {
-      path: 'detail-*',
-      name: 'detail',
+      path: '/detail/*',
       component: () => import(/* webpackChunkName: "common" */ './views/Detail.vue')
     },
     {
       path: '*',
-      name: 'common',
       component: () => import(/* webpackChunkName: "common" */ './views/Common.vue')
     }
   ]
